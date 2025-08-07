@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --primary: #00bcd4;
+            --secondary: #ff4081;
+            --bg: #f5f7fa;
+            --text: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        header p a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            animation: slideUp 1s ease;
+        }
+        
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section h2 {
+            font-size: 1.7rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--secondary);
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+        
+        .skills span {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 8px 16px;
+            margin: 6px 6px 6px 0;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .skills span:hover {
+            transform: scale(1.1);
+        }
+        
+        .project {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 5px solid var(--primary);
+            background: #f0faff;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .project:hover {
+            transform: translateY(-5px);
+            background: #e4f9fb;
+        }
+        
+        .project h3 {
+            color: var(--secondary);
+        }
+        
+        .project p {
+            margin: 5px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 60px;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+            transition: background 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-to-top:hover {
+            background: var(--secondary);
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p>Email: 221400066@gift.edu.pk | GitHub: <a href="https://github.com/MaryamSaif66" target="_blank">Maryam Saif 66</a></p>
+        </header>
+
+        <div class="section">
+            <h2>🎓 Education</h2>
+            <p><strong>BS in Software Engineering</strong><br/>Gift UNiversity Gujranwala, 2022–still</p>
+            <p><strong>Inter with Fsc medical </strong><br/>Punjab Collage, 2020–2022</p>
+            <p><strong>Matric</strong><br/>Ayesha Girls high School</p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Skills</h2>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Git</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MySQL</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📁 Projects</h2>
+
+            <div class="project">
+                <h3>ATM Simulation</h3>
+                <p>A Java based desktop system to simulate the working of atm Systems.</p>
+                <p><strong>Technologies:</strong> Java</p>
+                <p><a href="https://github.com/MaryamSaif66/ATMSimulation.git" target="_blank">View Repository</a></p>
+            </div>
+
+            <div class="project">
+                <h3>Worker Management App</h3>
+                <p>A system for contractors to manage the worker app.</p>
+                <p><strong>Technologies:</strong> react native,Firebase</p>
+                <p><a href="https://github.com/MaryamSaif66/Worker-Management-App.git" target="_blank">View Repository</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Your Name — All rights reserved.
+    </div>
+    </div>
+
+    <div class="back-to-top" id="backToTop" title="Back to top">↑</div>
+
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
